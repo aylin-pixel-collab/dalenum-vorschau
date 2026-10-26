@@ -1,0 +1,15 @@
+
+:root {
+  --dalenum-color-midnight-blue: #152535;   
+  --dalenum-color-ivory: #FAF8F4;           
+  --dalenum-color-stone: #D8D3CA;           
+  --dalenum-color-sage-grey: #8E9991;       
+  --dalenum-color-charcoal: #171717;        
+  --dalenum-color-midnight-blue-rgb: 21, 37, 53;
+  --dalenum-color-ivory-rgb: 250, 248, 244;
+  --dalenum-color-stone-rgb: 216, 211, 202;
+  --dalenum-color-sage-grey-rgb: 142, 153, 145;
+  --dalenum-color-charcoal-rgb: 23, 23, 23;
+  --dalenum-font-heading: Georgia, "Times New Roman", serif;
+  --dalenum-font-weight-regular: 400;
+}
