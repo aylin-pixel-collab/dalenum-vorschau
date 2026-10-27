@@ -281,6 +281,8 @@ p + p { margin-top: 1em; }
 .media-split figure { margin: 0; }
 .media-split img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 
+.media-split figure.figure--liten img { width: 100%; max-width: 280px; height: auto; aspect-ratio: auto; object-fit: contain; }
+
 
 .faq { border-top: 1px solid var(--ink); }
 .faq details { border-bottom: 1px solid var(--line); }
@@ -447,3 +449,7 @@ p + p { margin-top: 1em; }
 .ph { text-transform: none; letter-spacing: 0; font-size: 0.75rem; }
 .brandmark small { font-family: var(--wordmark); font-size: 1.12rem; }
 @media (max-width: 620px) { .brandmark small { font-size: 0.98rem; } }
+
+
+.footer-claim-block { display: block; }
+.site-footer .social-list { align-items: flex-start; justify-content: flex-start; padding-left: calc(44px + 16px - 3px); }
