@@ -27,7 +27,7 @@
 
   --side: clamp(20px, 4.4vw, 72px);
   --max: 1520px;
-  --section: clamp(80px, 10vw, 160px);
+  --section: clamp(56px, 6.5vw, 104px);
   --line: rgba(var(--ink-rgb), 0.16);
   --muted: rgba(var(--ink-rgb), 0.72);
   --header-h: 76px;
