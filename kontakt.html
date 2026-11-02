@@ -67,8 +67,98 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <div>
         <h1 id="rubrik">Välkommen till oss.</h1>
         <p class="lead">Ring, mejla eller kom förbi kliniken i Dalénum på Lidingö.</p>
+        <div class="actions"><a class="btn" href="bokning.html">Boka tid</a><a class="btn btn--ghost" href="#" data-forslag-av aria-disabled="true" title="Avstängt i designförslaget">Ring 08-86 10 10</a></div>
       </div>
     </div>
+  </section>
+
+  <section class="section bf-section" id="formular" aria-labelledby="formular-rubrik">
+    <link rel="stylesheet" href="assets/css/bokning.css">
+    <div class="wrap bf-layout">
+      <div class="bf-intro">
+        <h2 id="formular-rubrik" class="h-l">Skicka en förfrågan</h2>
+        <p class="lead">Berätta kort vad ditt djur behöver hjälp med. Vi kontaktar dig för att boka en tid. Din tid är bokad först när du har fått en bekräftelse från oss.</p>
+        <p class="bf-akut"><strong>Vid akuta besvär, ring oss på <a href="#" data-forslag-av aria-disabled="true" title="Avstängt i designförslaget">08-86 10 10</a>.</strong> Vänta inte på svar via formuläret.</p>
+      </div>
+
+      <div class="bf-wrap">
+        <form class="bf" id="bokningsformular" action="#formular" method="post" novalidate data-endpoint="" data-sitekey="">
+          <p class="bf-demo"><span class="ph">Demo – formuläret skickar inga meddelanden</span></p>
+          <p class="bf-note">Alla fält måste fyllas i om inget annat anges.</p>
+
+          <div class="bf-summary" id="bf-summary" tabindex="-1" hidden>
+            <h3>Kontrollera följande:</h3>
+            <ul></ul>
+          </div>
+
+          <div class="bf-grid">
+            <div class="bf-field" data-field="namn">
+              <label for="bf-namn">Ditt namn</label>
+              <input id="bf-namn" name="namn" type="text" autocomplete="name" maxlength="100" required aria-describedby="bf-namn-fel">
+              <p class="bf-error" id="bf-namn-fel" hidden></p>
+            </div>
+            <div class="bf-field" data-field="epost">
+              <label for="bf-epost">E-postadress</label>
+              <input id="bf-epost" name="epost" type="email" autocomplete="email" inputmode="email" maxlength="254" required aria-describedby="bf-epost-fel">
+              <p class="bf-error" id="bf-epost-fel" hidden></p>
+            </div>
+            <div class="bf-field" data-field="telefon">
+              <label for="bf-telefon">Telefonnummer</label>
+              <input id="bf-telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" required aria-describedby="bf-telefon-fel">
+              <p class="bf-error" id="bf-telefon-fel" hidden></p>
+            </div>
+            <div class="bf-field" data-field="djurets_namn">
+              <label for="bf-djurets-namn">Djurets namn <span class="bf-opt">(valfritt)</span></label>
+              <input id="bf-djurets-namn" name="djurets_namn" type="text" autocomplete="off" maxlength="60" aria-describedby="bf-djurets-namn-fel">
+              <p class="bf-error" id="bf-djurets-namn-fel" hidden></p>
+            </div>
+            <fieldset class="bf-field" data-field="djurslag" aria-describedby="bf-djurslag-fel">
+              <legend>Djurslag</legend>
+              <div class="bf-choices">
+                <label class="bf-choice" for="bf-djurslag-hund"><input id="bf-djurslag-hund" name="djurslag" type="radio" value="hund" required> Hund</label>
+                <label class="bf-choice" for="bf-djurslag-katt"><input id="bf-djurslag-katt" name="djurslag" type="radio" value="katt"> Katt</label>
+              </div>
+              <p class="bf-error" id="bf-djurslag-fel" hidden></p>
+            </fieldset>
+            <div class="bf-field" data-field="alder">
+              <label for="bf-alder">Djurets ålder <span class="bf-opt">(valfritt)</span></label>
+              <input id="bf-alder" name="alder" type="text" autocomplete="off" maxlength="30" aria-describedby="bf-alder-fel">
+              <p class="bf-error" id="bf-alder-fel" hidden></p>
+            </div>
+            <div class="bf-field bf-field--wide" data-field="meddelande">
+              <label for="bf-meddelande">Vad behöver ditt djur hjälp med?</label>
+              <textarea id="bf-meddelande" name="meddelande" rows="6" maxlength="2000" required placeholder="Beskriv kort symtomen, hur länge de har pågått och varför ni vill boka en tid." aria-describedby="bf-meddelande-antal bf-meddelande-fel"></textarea>
+              <p class="bf-count" id="bf-meddelande-antal">0 / 2 000 tecken</p>
+              <p class="bf-error" id="bf-meddelande-fel" hidden></p>
+            </div>
+            <div class="bf-field bf-field--wide" data-field="onskad_tid">
+              <label for="bf-onskad-tid">Önskad dag eller tid <span class="bf-opt">(valfritt)</span></label>
+              <input id="bf-onskad-tid" name="onskad_tid" type="text" autocomplete="off" maxlength="200" aria-describedby="bf-onskad-tid-fel">
+              <p class="bf-error" id="bf-onskad-tid-fel" hidden></p>
+            </div>
+          </div>
+
+          <div class="bf-hp" aria-hidden="true">
+            <label for="bf-webbplats">Lämna detta fält tomt</label>
+            <input id="bf-webbplats" name="webbplats" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="bf-turnstile" data-turnstile><span class="ph">Robotkontroll (Cloudflare Turnstile) visas här när formuläret kopplas in</span></div>
+
+          <p class="bf-privacy">Läs om hur vi hanterar personuppgifter i vår <a href="#" data-integritet>integritetspolicy</a>. <span class="ph">Länk läggs in</span></p>
+
+          <div class="bf-actions">
+            <button class="btn" type="submit">Skicka förfrågan</button>
+          </div>
+          <div class="bf-status" role="status" aria-live="polite"></div>
+          <noscript><p class="bf-status is-error">Formuläret kräver JavaScript. Ring oss på 08-86 10 10 eller mejla info@dalenumveterinarklinik.se.</p></noscript>
+        </form>
+        <div class="bf-done" id="bf-tack" tabindex="-1" hidden>
+          <p>Tack! Vi har tagit emot din förfrågan och kontaktar dig för att boka en tid.</p>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/bokning.js" defer></script>
   </section>
 
   <section class="section section--stone" aria-label="Kontaktuppgifter">
@@ -80,6 +170,12 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
         <div><h3>E-post</h3><p class="val"><a href="#" data-forslag-av aria-disabled="true" title="Avstängt i designförslaget">info@dalenum<wbr>veterinarklinik.se</a></p><p class="small">Journalkopior och remisser:<br><a href="#" data-forslag-av aria-disabled="true" title="Avstängt i designförslaget">remiss@dalenumveterinarklinik.se</a></p></div>
       </div>
       <p class="emergency"><strong>Akut sjukt djur?</strong> Om ditt djur är akut sjukt och behöver hjälp direkt ber vi dig att ringa oss innan du kommer till kliniken, så att vi kan ta emot er på bästa sätt och så snabbt som möjligt.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Kliniken på Agavägen 50" style="padding-bottom:0">
+    <div class="wrap">
+      <figure style="margin:0"><picture><source media="(max-width: 620px)" srcset="assets/bilder/klinik/dalenum-banner-hus-mobil.jpg" width="1200" height="900"><img src="assets/bilder/klinik/dalenum-banner-hus.jpg" alt="Klinikens tegelhus på Agavägen 50 i Dalénum med Dalénum Veterinärkliniks logotyp" width="2400" height="960" loading="lazy" style="display:block;width:100%;height:auto"></picture></figure>
     </div>
   </section>
 
